@@ -22,3 +22,11 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 ## License
 
 The script is open-sourced software licensed under the [SCODE license](http://opensource.org/#)
+
+## Thanks To
+Thanks to ALLAH SWT
+Thanks to Google
+Thanks to Github
+Thanks to Protocol WWW
+Thanks to ISP
+Thanks to Laptop
