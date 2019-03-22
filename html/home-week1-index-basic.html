@@ -1,0 +1,649 @@
+<!-- Uniform Resource Locator (URL)  -->
+<!DOCTYPE html> <!-- declaration defines this document to be HTML5 -->
+<html lang="en">
+    <!-- Declaring a language is important for accessibility applications (screen readers) and search engines: -->
+<head>
+    <!-- Note: Metadata typically define the document title, 
+        character set, styles, links, scripts, and other meta information. -->
+    <meta charset="UTF-8"/> <!-- html 5 encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Flashback HTML CSS PHP">
+    <meta name="keywords" content="HTML, CSS, PHP, KOTLIN, JAVA, REACT NATIVE, Android Studio">
+    <meta name="author" content="Yogi Arif Widodo">
+    <meta http-equiv="refresh" content="360">
+    <title>Keep Learning Keep Hustle</title>
+    <!-- The HTML <head> element has nothing to do with HTML headings.
+         The <head> element is a container for metadata. 
+         HTML metadata is data about the HTML document. Metadata is not displayed. -->
+    <link rel="stylesheet" type="text/css" href="/css/styleCustomebyMe.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="/js/bootstrap.min.js"> -->
+
+    <!--   
+            <style>	Defines style information for an HTML document
+            <link>	Defines a link between a document and an external resource -->
+
+  <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+  <![endif]-->
+  <!-- You should use the HTML5Shiv when you are using the new HTML5 elements such as: <article>, <section>, <aside>, <nav>, <footer>. -->
+</head>
+<body>
+<noscript>Sorry bro, your browser doest not support Javascript !</noscript>
+        <!-- The <div> Element
+                The <div> element is often used as a container for other HTML elements.
+                
+                The <div> element has no required attributes, but style, class and id are common.
+                
+                When used together with CSS, the <div> element can be used to style blocks of content:
+                     -->
+        <!-- The <span> Element
+                The <span> element is often used as a container for some text.
+                
+                The <span> element has no required attributes, but style, class and id are common.
+                
+                When used together with CSS, the <span> element can be used to style parts of the text: -->
+        <div id="home"></div>
+        <div class="sticky">
+                <div class="row">
+                        <div class="menu sticky ripple">
+                            <ul>
+                                    <li class="leftMode; ripple"><a href="#home"> <i class="fa fa-home"></i> Home</a></li>
+                                    <li class="leftMode" ><a href="#news"><i class="fas fa-newspaper"></i></a></li>
+                                    <li class="leftMode"><a href="#contact"><i class="fas fa-address-book"></i></a></li>
+                                    <li class="leftMode"><a href="#about"><i class="fas fa-bell"></i></a></li>
+                                    <li class="leftMode" ><a href="#news"><i class="fas fa-graduation-cap"></i></i></a></li>
+                                    <li class="leftMode"><a href="#contact"><i class="fas fa-laptop-code"></i></i></a></li>
+                                    <li class="leftMode"><a href="#about"><i class="fas fa-music"></i></a></li>
+                                    <li class="leftMode" ><a href="#news"><i class="fas fa-chalkboard"></i></a></li>
+                                    <li class="leftMode"><a href="#contact"><i class="fas fa-camera-retro"></i></a></li>
+                                    <li class="leftMode"><a href="#about"><i class="fas fa-info"></i></a></li>
+                            </ul>
+                        </div>
+                </div>
+        </div>
+
+        <!-- <header> - Defines a header for a document or a section
+          <nav> - Defines a container for navigation links
+          <section> - Defines a section in a document
+          <article> - Defines an independent self-contained article
+          <aside> - Defines content aside from the content (like a sidebar)
+          <footer> - Defines a footer for a document or a section
+          <details> - Defines additional details
+          <summary> - Defines a heading for the <details> element -->
+   
+    <p id="p01"><strong>I am different ok</strong></p>
+    <p class="error"><strong>I am different this anError</strong></p>
+
+    <p id="cuStyle" style="border: none;"><a href="http://127.0.0.1:5500/html/index.html" title="HOME"><i id="news" class="fa fa-home"></i> Home</a></p>
+    <p id="cuStyle" style="border: none;"><a href="#colorYogi" title="COLOR"><i class="fa fa-envelope"></i> Msg</a></p>
+
+    <h1>DokterIT</h1>
+
+    <figure>
+      <img src="/img/scodeid.jpg" class="left" alt="scodeid-logo.png"  style="float:left; max-width: 100%; height: auto;">
+      <figcaption>SCODEID</figcaption>
+    </figure>
+    <figure>
+      <img src="/img/grad.gif" alt="scodeid-logo.png" id="gradImage" class="right" style="float:right;max-width: 100%; height: auto">
+      <figcaption>school</figcaption>
+    </figure>
+    
+    <div class="main">
+            <button class="ripple" onclick="alert('hello world!')" >Button</button>
+        <hr>
+
+        <div class="row">
+            <div class="col-3 col-s-3 menu">
+                        <ul> <!-- unordered list -->
+                            <li class="ripple">Coffe</li>
+                            <li class="ripple">Tea</li>
+                            <li class="ripple">Milk</li>
+                        </ul>
+                        <!-- By default, an ordered list will start counting from 1. 
+                             If you want to start counting from a specified number, 
+                             you can use the start attribute: -->
+                        <ol> <!-- ordered list -->
+                            <li class="ripple">asd</li>
+                        </ol>
+            </div>
+            
+            <div class="col-6 col-s-9">                
+                    <a href="https://scodeid.blogspot.com">This a link</a>
+                    <p>p style color:red asksa dasklsdj asdklj
+                        p style color:red asksa dasklsdj asdklj
+                        p style color:red asksa dasklsdj asdklj
+                        p style color:red asksa dasklsdj asdklj
+                        p style color:red asksa dasklsdj asdklj
+                        p style color:red asksa dasklsdj asdklj
+                    </p>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <h1 style="width: 35%; float: left"></h1>
+    <div>
+        <img src="/img/workplace.jpg" alt="Workplace" usemap="#workmap" style="max-width:100%; height: auto;">
+    
+        <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+        </map>
+    </div>
+    
+    <p style="background-image:url('/img/scodeid.jpg');">
+            ...
+            <br>
+            ....
+            <br>
+            .....
+            <br>
+            <yogi style="color:saddlebrown">background-image</yogi>
+            <br>
+            ......
+            </p>
+
+            <picture>
+                    <source media="(min-width: 650px)" srcset="img_pink_flowers.jpg">
+                    <source media="(min-width: 465px)" srcset="img_white_flower.jpg">
+                    <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+                  </picture>
+    <hr>
+
+    <h1 title="ini ToolTips">ToolTip</h1> <!-- use title="value" attribut -->
+    <h1 style="font-size:60px;">Heading 1</h1>
+
+    <pre>preformated-text (usually courier)</pre>
+    <!-- <tagname style="property:value;"></tagname> -->
+
+    <h1 style="font-family:verdana;">This is a heading</h1>
+    <p style="font-family:courier;">This is a paragraph.</p>
+    <p style="font-size:200%;">asdasd</p>
+    <h1 style="text-align:center">asd</h1>
+    <p style="text-align:center">asd</p>
+    <!-- 
+        Chapter Summary
+        Use the style attribute for styling HTML elements
+        Use background-color for background color
+        Use color for text colors
+        Use font-family for text fonts
+        Use font-size for text sizes
+        Use text-align for text alignment 
+                                        -->
+       <em>This text is emphasized</em>
+       <br>
+       <i>this text italic</i>
+       <br>
+       <b>this text bold</b>
+       <br>
+       <strong>this text strong</strong>
+       <!-- Note: Browsers display <strong> as <b>, 
+                  and <em> as <i>. However, 
+                      there is a difference in the meaning of these tags: 
+                      <b> and <i> defines bold and italic text, 
+                          but <strong> and <em> means that the text is "important" -->
+                                <h2>HTML <small>Small</small> Formatting</h2>
+                                <h2>HTML <mark>Marked</mark> Formatting</h2>
+                                <p>My favorite color is <del>blue</del> red.</p>
+                                <p>My favorite <ins>color</ins> is red.</p>
+                                <p>This is <sub>subscripted</sub> text.</p>
+                                <p>This is <sup>superscripted</sup> text.</p>
+
+    
+     <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+
+    <p>Here is a quote from WWF's website:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+    For 50 years, WWF has been protecting the future of nature.
+    The world's leading conservation organization,
+    WWF works in 100 countries and is supported by
+    1.2 million members in the United States and
+    close to 5 million globally.
+    </blockquote>
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+    <!-- The HTML <abbr> element defines an abbreviation or an acronym.
+
+            Marking abbreviations can give useful information to browsers, translation systems and search-engines. -->
+            <address>
+                    Written by John Doe.<br> 
+                    Visit us at:<br>
+                    Example.com<br>
+                    Box 564, Disneyland<br>
+                    USA
+                    </address>
+                    <bdo dir="rtl">This text will be written from right to left</bdo>
+
+    <h1 id="colorYogi" style="background-color:DodgerBlue; text-align: center; padding: 1%; align-self: auto; font-size: 24px; color: white; box-sizing: inherit; display: block; font-family: Verdana, Geneva, Tahoma, sans-serif;">Hello World </h1>
+    <p style="background-color:Tomato; padding: 16px; font-size: large; font-family: Verdana, Geneva, Tahoma, sans-serif; clear: both; border: none">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
+        dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper 
+        suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+
+        <!-- Tomato
+                Orange
+                    DodgerBlue
+                        MediumSeaGreen
+                            Gray
+                                SlateBlue
+                                    Violet
+                                        LightGray -->
+<h1 style="background-color:Tomato; color: white; font-family: Verdana, Geneva, Tahoma, sans-serif">Tomato</h1>
+<h1 style="background-color:Orange;color: white; font-family: Verdana, Geneva, Tahoma, sans-serif">Orange</h1>
+<h1 style="background-color:DodgerBlue;color: white; font-family: Verdana, Geneva, Tahoma, sans-serif">DodgerBlue</h1>
+<h1 style="background-color:MediumSeaGreen;color: white; font-family: Verdana, Geneva, Tahoma, sans-serif">MediumSeaGreen</h1>
+<h1 style="background-color:Gray;color: white; font-family: Verdana, Geneva, Tahoma, sans-serif">Gray</h1>
+<h1 style="background-color:SlateBlue;color: white; font-family: Verdana, Geneva, Tahoma, sans-serif">SlateBlue</h1>
+<h1 style="background-color:Violet;color: white; font-family: Verdana, Geneva, Tahoma, sans-serif">Violet</h1>
+<h1 style="background-color:LightGray;color: white; font-family: Verdana, Geneva, Tahoma, sans-serif">LightGray</h1>
+<h1 style="border:2px solid Tomato;">Hello World</h1>
+<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+<h1 style="border:2px solid Violet;">Hello World</h1>
+
+
+<button onclick="topFunction()" id="scrlTopBtn"><i class="fa fa-arrow-up" title="Go to top"></i></button>
+
+<button onclick="botFunction()" id="scrlBotBtn" ><i class="fa fa-arrow-down" title="Go to bottom"></i></button>
+
+<table style="width:100%">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th> 
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td> 
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td> 
+          <td>94</td>
+        </tr>
+      </table>
+
+      <h2 class="responsiveText">HTML Table</h2>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
+
+<p style="text-align: center;"><span>Hello</span><span>Span Display : Block</span></p>
+<table>
+        <tr>
+          <th>Name</th>
+          <th colspan="2">Telephone</th>
+        </tr>
+        <tr>
+          <td>Yogi Arif Widodo</td>
+          <td>55577854</td>
+          <td>55577855</td>
+        </tr>
+</table>
+<p style="text-align: center;"><span>above colspan = 2</span><span>above rowspan = 2</span></p>
+<table style="width:100%">
+    <caption>Table Anu</caption>
+        <tr>
+          <th>Name:</th>
+          <td>Bill Gates</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Telephone:</th>
+          <td>55577854</td>
+        </tr>
+        <tr>
+          <td>55577855</td>
+        </tr>
+</table>
+<br>
+<hr>
+
+<!-- The <dl> tag defines the description list, 
+     the <dt> tag defines the term (name), and 
+     the <dd> tag describes each term: -->
+<dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+      </dl>
+      <h2 class="city mainCity">London</h2>
+      <h2 class="city">Paris</h2>
+      <h2 class="city">Tokyo</h2>
+<hr>
+
+<div class="cities">
+  <p><h2>Samarinda</h2> <span style="color: white">Samarinda is the capital of indonesia</span></p>
+</div>
+<div class="cities">
+  <p><h2>Jakarta</h2> <span style="color: white">Samarinda is the capital of indonesia</span></p>
+</div>
+<hr>
+<h1>Html Javascript</h1>
+<button type="button" onclick="showFuncDate()" class="ripple">Show Date</button>
+<div class="cities">
+  <p id="showDate" style="color:white; display: none"></p>
+</div>
+
+<hr>
+
+<header>
+  <h1>Cities</h1>
+</header>
+
+<section>
+  <nav>     <!-- container -->
+    <div class="row">
+        <div class="menu">
+    <ul>
+      <li class="ripple"><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+    </ul>
+    </div>
+    </div>
+  </nav>
+  
+  <article>
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+  </article>
+</section>
+
+<footer style="background: #1c313a; box-shadow: 0 0 4px #1c313a; outline: none">
+  <p style="border:none; text-align: center">Footer</p>
+</footer>
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non placeat eos earum quibusdam reprehenderit consequatur numquam ex consectetur! Molestiae quidem exercitationem atque aspernatur illo culpa labore iusto aliquid in. Vel!
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non placeat eos earum quibusdam reprehenderit consequatur numquam ex consectetur! Molestiae quidem exercitationem atque aspernatur illo culpa labore iusto aliquid in. Vel!
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non placeat eos earum quibusdam reprehenderit consequatur numquam ex consectetur! Molestiae quidem exercitationem atque aspernatur illo culpa labore iusto aliquid in. Vel!
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non placeat eos earum quibusdam reprehenderit consequatur numquam ex consectetur! Molestiae quidem exercitationem atque aspernatur illo culpa labore iusto aliquid in. Vel!
+
+<h2>Computer Code</h2>
+<p>Some programming code:</p>
+<pre>
+  <!-- for line brea use pre -->
+  <code>
+    x = 5
+    y = 10
+  </code>
+</pre>
+<p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+<p>If you input wrong value, the program will return <samp>Error!</samp></p>
+<!-- Some Other Useful HTML Character Entities
+     Combining Diacritical Marks
+     Some Mathematical Symbols Supported by HTML
+     Some Greek Letters Supported by HTM
+     Some Other Entities Supported by HTML
+ -->
+<p>Einstein wrote: <var>E</var> = <var>mc</var><sup>2</sup>  &lt; or &#60; 	&rarr;</p>
+<hr>
+
+<form action="/action_page.php" autocomplete="on" novalidate>
+  <fieldset>
+    <legend>Personal information:</legend>
+    First name:
+    <br>
+    <input type="text" name="firstname" placeholder="First Name" maxle>
+    <br>
+    Last name:
+    <br>
+    <input type="text" name="lastname" value="">
+    <br>
+    Email:
+    <br>
+    <input type="email" name="email" id="idEmail" required>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+    <input type="submit" name="submitAsAdmin" value="Submit As Admin" id="idSubmitAdmin" formaction="/action_page2.php">
+    <input type="reset" name="reset" id="idReset" style="outline:none; border: none; padding: 4px; margin: 4px; max-width: 100%; color: white; background-color: tomato" class="ripple">
+    <br>
+    <br>
+    <input type="date">
+    <br>
+    <br>
+    <input type="color">
+    <br>
+    <br>
+    <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+    <br>
+    <br>
+    Select images: <input type="file" name="img" multiple>
+    <br>
+    <br>
+    Country code: <input type="text" name="country_code" pattern="[A-Za-z]{2}" title="Three letter country code">
+    <input type="submit" name="submit">
+  </fieldset>
+</form>
+
+<form action="/action_page.php" method="get">
+
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+  </form>
+
+<form action="/action_page.php" class="ripple">
+  <select name="laptop" id="selectStyle">
+    <option value="ROG" selected>ROG</option>
+    <option value="ASUS">ASUS</option>
+    <option value="ACER">ACER</option>
+  </select>
+  <br><br>
+  <input type="submit" name="submit" id="idSubmit">
+</form>
+<br>
+<textarea name="message" id="idMessage" cols="30" rows="10">
+  The riah was playing in the garden
+</textarea>
+<form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0 <input type="range" id="a" name="a" value="50"> 100 + <input type="number" id="b" name="b" value="50">
+  = <output name="x" for="a b"></output>
+  <input type="submit">
+
+</form>
+
+<hr>
+
+<header>
+  <h1>HTML5 Skeleton</h1>
+</header>
+
+<nav>
+  <ul>
+    <li>News</li>
+    <li>Sports</li>
+    <li>Weather</li>
+  </ul>
+</nav>
+
+<article>
+  <section>
+    <h2>Famous Cities</h2>
+    <div class="city">
+      <h2>London</h2>
+      <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    </div>
+
+    <div class="city">
+      <h2>Paris</h2>
+      <p>Paris is the capital and most populous city of France.</p>
+    </div>
+
+    <div class="city">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Famous Countries</h2>
+    <div class="country">
+      <h2>England</h2>
+      <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    </div>
+
+    <div class="country">
+      <h2>France</h2>
+      <p>Paris is the capital and most populous city of France.</p>
+    </div>
+
+    <div class="country">
+      <h2>Japan</h2>
+      <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+    </div>
+  </section>
+</article>
+
+<footer>
+  <p>&copy; 2014 W3Schools. All rights reserved.</p>
+</footer>
+
+<hr>
+
+<canvas id="myCanvas1" width="200" height="100" style="border: 1px solid #1c1c1c" ></canvas>
+<br>
+<p>Canvas to fill:</p>
+<canvas id="myCanvas" width="250" height="300" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<p><button onclick="myCanvas()">Try it</button></p>
+
+<script>
+function myCanvas() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("gradImage");
+  ctx.drawImage(img,10,10);
+}
+</script>
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+<svg width="400" height="100">
+  <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+</svg>
+<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+  style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+<svg width="300" height="200">
+  <polygon points="100,10 40,198 190,78 10,78 160,198"
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</svg>
+<svg height="130" width="500">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+  <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+<!-- SVG is a language for describing 2D graphics in XML.
+
+Canvas draws 2D graphics, on the fly (with a JavaScript). -->
+<hr>
+<h1>VIDEO</h1>
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+
+<hr>
+<h1>AUDIO</h1>
+
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<hr>
+<h1>OBJECT HTML PLUGin</h1>
+<object width="400" height="50" data="bookmark.swf"></object>
+<object width="100%" height="500px" data="snippet.html"></object>
+<object data="audi.jpeg"></object>
+<hr>
+
+<p>
+  Drag and drop
+</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img src="/img/scodeid.jpg" alt="scodeid logo" id="drag1" draggable="true" ondragstart="drag(event)" style="max-width:100%; height:auto">
+
+
+<!-- FOOTER  -->
+<hr>
+<h1 id="about" class="responsiveText">Responsive continue</h1>
+<div class="left">
+    <p>left menu</p>
+</div>
+<div class="main">
+    <p>Main content</p>
+</div>
+<div class="right">
+    <p>right menu</p>
+</div>
+<br>
+<div class="footer">
+      <span style="color:rgba(255, 255, 255, 0.5)"> Copyright &#169; 2019 SCODE.ID <i class="fa fa-heart" style="color:#eb6b6c;margin:0 0 0 7px;"></i> <abbr title="Visual Studio Code">VSCODE</abbr></span> 
+</div>
+<script src="/js/app.js"></script>
+</body>
+</html>
+
+
+<!-- <button onclick="bottomFunction()" id="scrlBotBtn" title="Go to bottom">Bottom</button> -->

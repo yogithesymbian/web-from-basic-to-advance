@@ -1,0 +1,146 @@
+html
+{
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: auto;
+}
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: darkslategray;
+    color: white;
+    background-image: url("/img/scodeid.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: 200px;
+
+    /* SHORTHAND property order value is -image -repeat -position -attachment
+    ==============================================================================
+    background: #ffffff url("img_tree.png") no-repeat right top; */
+}
+
+/* CSS SELECTOR
+==========================
+this ELEMENT SELECTOR
+    h1
+    {
+        //code
+    }
+this ID SELECTOR
+    #para1
+    {
+        //code
+    }
+this CLASS SELECTOR
+    .center
+    {
+        //code
+    }
+ */
+
+h1 , p
+{
+    text-align: center;
+}
+
+.p-outline
+{
+    border: 2px solid rgba(173, 216, 230, 0.116);
+    outline: 2px solid darkturquoise;
+}
+.animh1
+{
+    padding: 30px;
+    text-align: center;
+    background: rgba(173, 216, 230, 0.116);
+    width: 300px;
+    margin-left: 350px;
+    -webkit-transition: width 2s;
+    transition: width 2s;
+}
+.animh1:hover
+{
+    width: 700px;
+}
+
+.top-h1, .top-p
+{
+    margin-top: 90px;
+    margin-right: 30%;
+}
+
+.border-p
+{
+    border-bottom: solid;
+    border-color: darkturquoise;
+    border-width: 1px;
+    border-radius: 12px;
+}
+
+div
+{
+  border: 1px solid darkturquoise;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: rgba(173, 216, 230, 0.116);
+  /* SHORTHAND
+  =========================== 
+    margin: 25px 50px 75px 100px;
+            top margin is 25px
+            right margin is 50px
+            bottom margin is 75px
+            left margin is 100px
+  */
+
+}
+
+.yotext
+{
+    height: 8px;
+    width: 400px;
+    -webkit-transition: width 2s, height 2s;
+    transition: width 2s, height 2s;
+}
+
+.yotext:hover
+{
+    width: 800px;
+    height: 30px;
+}
+
+a:link
+{
+    color: darkturquoise;
+}
+a:hover
+{
+    color: darkgoldenrod;
+}
+
+/* table
+================================== */
+
+table
+{
+    border: 1x;
+    max-width: 100%;
+}
+td, th
+{
+    text-align: left;
+    padding: 8px;
+}
+th
+{
+    
+  border: 1px solid #1c313a;
+}
+tr:nth-child(even)
+{
+    background-color: #1c313a;
+    color: rgba(255, 255, 255, 0.7);
+}
