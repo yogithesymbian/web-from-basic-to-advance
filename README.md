@@ -7,7 +7,9 @@ html, css, javscript, php
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://github.com/yogithesymbian/web-from-basic-to-advance)
 [![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://github.com/yogithesymbian/web-from-basic-to-advance)
 
-
+/html //show the folder to view basic
+/template-v1-2019 //the folder, i created for responsive by myself,
+/crud-week-kampus //Create, Read, Update, Delete | somefile in /myStyleCode [![Using Bootstrap]
 
 ## Official Documentation
 
