@@ -11,6 +11,8 @@ html, css, javscript, php [![View Code](https://github.com/yogithesymbian/web-fr
 2. /template-v1-2019 //the folder, i created style for responsive view by myself,
 3. /crud-week-kampus //Create, Read, Update, Delete | somefile in there is [![Using Bootstrap](https://getbootstrap.com/)
 
+![alt text](https://raw.githubusercontent.com/yogithesymbian/web-from-basic-to-advance/master/img/web-from-basic-to-advance.JPG)
+
 ## Official Documentation
 
 Documentation for the script can be found on the [scodeid](#).
