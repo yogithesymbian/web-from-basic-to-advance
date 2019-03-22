@@ -8,8 +8,8 @@ html, css, javscript, php
 [![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://github.com/yogithesymbian/web-from-basic-to-advance)
 
 1. /html //show the folder to view basic
-2. /template-v1-2019 //the folder, i created for responsive by myself,
-3. /crud-week-kampus //Create, Read, Update, Delete | somefile in /myStyleCode [![Using Bootstrap]
+2. /template-v1-2019 //the folder, i created style for responsive view by myself,
+3. /crud-week-kampus //Create, Read, Update, Delete | somefile in there is [![Using Bootstrap](https://getbootstrap.com/)
 
 ## Official Documentation
 
