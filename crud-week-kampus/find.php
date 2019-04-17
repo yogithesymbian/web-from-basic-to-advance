@@ -1,5 +1,9 @@
+<!--
+
+ -->
+
 <?php
- // Create database connection using config file
+// Create database connection using config file
 include_once("../crud-week-kampus/apiEndPoint/connection.php");
 
 // Fetch all users data from database
@@ -68,26 +72,27 @@ $category = mysqli_query($CONN, "SELECT
         </ul>
         <!-- EndOfBreadCumb -->
         <h1 class="text-center">Daftar Mahasiswa Polnes yang Liburan ke Planet Bumi</h1>
-
-        <div class="col-md-offset-4">
-            <!-- grouping an element -->
-            <div class="input-group">
-                <select name="category" class="form-control" id="sel1" style="width: 30%">
-                    <option value="all">-- ALL --</option>
-                    <!-- get data from query $category and looping that -->
-                    <?php
-                    while ($user_data = mysqli_fetch_array($category)) {
-                        echo "<option>" . $user_data['nm_jur'] . "</option>";
-                    }
-                    ?>
-                    <!-- End Of Get Data -->
-                </select>
-                <!-- Search Function with prefix/parameter find=$value-->
-                <input type="text" placeholder="Search" name="find" class="form-control" style="width: 60%">
-                <button class="btn btn-default form-control" type="submit" style="width: 10%"> <i class="glyphicon glyphicon-search"></i></button>
-                <!-- End Of Search Function -->
+        <form action="find.php">
+            <!-- middle using offset from bootstrap -->
+            <div class="col-md-offset-4">
+                <!-- grouping an element -->
+                <div class="input-group">
+                    <select name="category" class="form-control" id="sel1" style="width: 30%">
+                        <option value="all">-- ALL --</option>
+                        <!-- get data from query $category and looping that -->
+                        <?php
+                        while ($user_data = mysqli_fetch_array($category)) {
+                            echo "<option>" . $user_data['nm_jur'] . "</option>";
+                        }
+                        ?>
+                        <!-- End Of Get Data -->
+                    </select>
+                    <!-- Search Function with prefix/parameter find=$value-->
+                    <input type="text" placeholder="Search" name="find" class="form-control" style="width: 60%">
+                    <button class="btn btn-default form-control" type="submit" style="width: 10%"> <i class="glyphicon glyphicon-search"></i></button>
+                    <!-- End Of Search Function -->
+                </div>
             </div>
-        </div>
         </form>
         <br>
         <!-- table body -->
@@ -146,4 +151,4 @@ $category = mysqli_query($CONN, "SELECT
     <!-- End Of Container Body -->
 </body>
 
-</html> 
+</html>

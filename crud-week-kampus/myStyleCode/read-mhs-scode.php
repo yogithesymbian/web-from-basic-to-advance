@@ -1,7 +1,7 @@
-<?php
- // include connection and there is name is $CONN
-include_once("../myStyleCode/api/connection.php");
-?>
+<!--
+    THIS HOME VIEW WITH PAK KARYO
+    HOME[1]
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +9,9 @@ include_once("../myStyleCode/api/connection.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Daftar Mahasiswa</title>
+    <meta name="description" content="CRUD ( create, read, update, delete)">
+    <meta name="author" content="Yogi Arif Widodo">
+    <meta name="keywords" content="html, php, css, crud, javascript">
     <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -20,7 +23,11 @@ include_once("../myStyleCode/api/connection.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body style="background: url('../../img/white-tech3.jpg')">
+    <?php
+    // include connection and there is name is $CONN
+    include_once("../myStyleCode/api/connection.php");
+    ?>
     <div class="container">
         <!-- BreadCumb -->
         <ul class="breadcrumb">
@@ -43,8 +50,8 @@ include_once("../myStyleCode/api/connection.php");
                         include("../myStyleCode/api/query-data.php");
                         // get data from {include} in there is query $category, use it and looping that
                         while ($user_data = mysqli_fetch_array($category)) {
-                            echo "<option>" . $user_data['nm_jur'] . "</option>";
-                        }
+                                echo "<option>" . $user_data['nm_jur'] . "</option>";
+                            }
                         ?>
                         <!-- End Of Get Data -->
                     </select>
@@ -66,7 +73,7 @@ include_once("../myStyleCode/api/connection.php");
                         <th>Tanggal lahir</th>
                         <th>Agama</th>
                         <th>Alamat</th>
-                        <th>Prody</th>
+                        <th>Jurusan</th>
                         <th>action</th>
                     </tr>
                 </thead>
@@ -92,10 +99,10 @@ include_once("../myStyleCode/api/connection.php");
                                 if (isset($user_data)) {
                                     echo "<td>";
                                     // edit
-                                    echo "<a href='edit.php' class='btn btn-primary btn-xs disabled'>";
+                                    echo "<a href='edit.php?nim=$user_data[nim]' class='btn btn-primary btn-xs'>";
                                     echo "<span class='glyphicon glyphicon-edit'>Edit</a> ";
                                     // delete
-                                    echo "<a class='btn btn-danger btn-xs'";
+                                    echo "<a href='delete.php?nim=$user_data[nim]' class='btn btn-danger btn-xs'";
                                     echo "<span class='glyphicon glyphicon-trash'>Delete</a>";
                                     echo "</td>";
                                     // echo "<td><a href='edit.php?id=$user_data[id]'>Edit</a> | <a href='delete.php?id=$user_data[id]'>Delete</a></td></tr>";
@@ -112,4 +119,4 @@ include_once("../myStyleCode/api/connection.php");
     <!-- End Of Container Body -->
 </body>
 
-</html> 
+</html>
