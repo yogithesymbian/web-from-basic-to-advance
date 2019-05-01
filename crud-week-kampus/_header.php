@@ -43,13 +43,13 @@ require_once "_config/config.php";
                     <strong>Crud - Relationship DB</strong>
                 </li>
                 <li>
-                    <a href="<?= base_url('dosenStyle/view_jurusan.php') ?>"><span class="glyphicon glyphicon-book"></span> Data Jurusan</a>
+                    <a href="<?= base_url('akademik/jurusan/view_jurusan.php') ?>"><span class="glyphicon glyphicon-book"></span> Data Jurusan</a>
                 </li>
                 <li>
-                    <a href="<?= base_url('dosenStyle/view_prody.php') ?>"><span class="glyphicon glyphicon-book"></span> Data Prody</a>
+                    <a href="<?= base_url('akademik/prody/view_prody.php') ?>"><span class="glyphicon glyphicon-book"></span> Data Prody</a>
                 </li>
                 <li>
-                    <a href="<?= base_url('dosenStyle/view_mhs.php') ?>"><span class="glyphicon glyphicon-book"></span> Data Mahasiswa</a>
+                    <a href="<?= base_url('akademik/mhs/view_mhs.php') ?>"><span class="glyphicon glyphicon-book"></span> Data Mahasiswa</a>
                 </li>
                 <li>
                     <strong>basic</strong>
@@ -61,7 +61,7 @@ require_once "_config/config.php";
                     <strong>Searching</strong>
                 </li>
                 <li>
-                <a href="<?= base_url('myStyleCode/find.php') ?>"><span class="glyphicon glyphicon-paperclip"></span> Mahasiswa</a>
+                    <a href="<?= base_url('myStyleCode/find.php') ?>"><span class="glyphicon glyphicon-paperclip"></span> Mahasiswa</a>
                 </li>
                 <li>
                     <strong>Config</strong>

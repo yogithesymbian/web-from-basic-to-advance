@@ -5,23 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hapus Data Prody</title>
+    <title>Hapus Data Jurusan</title>
 </head>
 
 <body>
     <?php
-    include_once('../_config/config.php');
+    include_once('../../_config/config.php');
 
-    $kd_prody = $_GET['kd_prody'];
+    $nim = $_GET['nim'];
 
-    $query_show = "SELECT * FROM mhs WHERE kd_prody='$kd_prody'";
-    $hasil = mysqli_query($conncrud, $query_show);
-    $record = mysqli_num_rows($hasil);
+    $query_del = "DELETE FROM mhs WHERE nim='$nim'";
+    $hasil = mysqli_query($conncrud, $query_del);
 
-    if ($record < 1) {
-
-        $query = "DELETE FROM prody WHERE kd_prody='$kd_prody'";
-        mysqli_query($conncrud, $query);
+    if ($hasil == 1) {
 
         ?>
         <script language='Javascript'>
@@ -30,7 +26,7 @@
         </script>";
 
         <script language='javascript'>
-            location.href = 'view_prody.php'
+            location.href = 'view_jurusan.php'
         </script>";
     <?php
 } else {
@@ -38,14 +34,16 @@
         ?>
         "<script language='Javascript'>
             ;
-            (window.alert('Data tidak Terhapus, Karena sedang di pakai table'))
+            (window.alert('Data tidak Terhapus'))
         </script>";
 
         "<script language='javascript'>
-            location.href = 'view_prody.php'
+            location.href = 'view_jurusan.php'
         </script>";
     <?php
 }
+
+
 ?>
 
 </body>

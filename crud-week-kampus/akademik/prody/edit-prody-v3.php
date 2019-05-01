@@ -80,6 +80,7 @@ while ($data_data = mysqli_fetch_array($query)) {
                 <div class="form-group">
                     <div class="col-sm-10 pull-right">
                         <button type="submit" class="btn btn-danger btn-sm" name="update"> <span class="glyphicon glyphicon-upload"></span> Update</button>
+                        <a href="<?= base_url('akademik/prody/view_prody.php') ?>" class="btn btn-warning"> Back </a>
                     </div>
                 </div>
             </form>

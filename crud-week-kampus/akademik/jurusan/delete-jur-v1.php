@@ -10,14 +10,20 @@
 
 <body>
     <?php
-    include_once('../_config/config.php');
+    include_once('../../_config/config.php');
 
+    // ?kd_jur = TI
     $kd_jur = $_GET['kd_jur'];
 
-    $query_del = "DELETE FROM jurusan WHERE kd_jur='$kd_jur'";
-    $hasil = mysqli_query($conncrud, $query_del);
+    $query_show = "SELECT * FROM prody WHERE kd_jur='$kd_jur'";
+    $hasil = mysqli_query($conncrud, $query_show);
+    $record = mysqli_num_rows($hasil);
 
-    if ($hasil == 1) {
+    // ?rec
+    if ($record < 1) {
+
+        $query = "DELETE FROM jurusan WHERE kd_jur='$kd_jur'";
+        mysqli_query($conncrud, $query);
 
         ?>
         <script language='Javascript'>
@@ -34,7 +40,7 @@
         ?>
         "<script language='Javascript'>
             ;
-            (window.alert('Data tidak Terhapus'))
+            (window.alert('Data tidak Terhapus, Karena sedang di pakai table prody'))
         </script>";
 
         "<script language='javascript'>
@@ -42,8 +48,6 @@
         </script>";
     <?php
 }
-
-
 ?>
 
 </body>

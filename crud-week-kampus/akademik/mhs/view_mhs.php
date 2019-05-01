@@ -1,4 +1,4 @@
-<?php include_once('../_header.php'); ?>
+<?php include_once('../../_header.php'); ?>
 <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"> <span class="glyphicon glyphicon-align-justify"></span> </a>
 <div class="row">
     <div class="col-lg-12">
@@ -77,4 +77,4 @@
 </div>
 </div>
 
-<?php include_once('../_footer.php'); ?>
+<?php include_once('../../_footer.php'); ?>

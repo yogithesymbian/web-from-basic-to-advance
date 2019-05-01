@@ -1,4 +1,4 @@
-<?php include_once('../_header.php'); ?>
+<?php include_once('../../_header.php'); ?>
 
 <?php
 include_once('../_config/config.php');
@@ -34,7 +34,7 @@ $nama = $_GET['nm_jur'];
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <input type="submit" value="Save" class="btn btn-primary">
-                        <a href="<?= base_url('dosenStyle/view_jurusan.php') ?>" class="btn btn-warning"> Back </a>
+                        <a href="<?= base_url('akademik/jurusan/view_jurusan.php') ?>" class="btn btn-warning"> Back </a>
                     </div>
                 </div>
             </form>
@@ -84,4 +84,4 @@ $nama = $_GET['nm_jur'];
     </div>
 </div>
 
-<?php include_once('../_footer.php'); ?>
+<?php include_once('../../_footer.php'); ?>

@@ -1,4 +1,4 @@
-<?php include_once('../_header.php'); ?>
+<?php include_once('../../_header.php'); ?>
 
 <?php
 // $con = mysqli_connect("localhost", "root", "", "ti_4a_2019");
@@ -64,6 +64,7 @@ while ($jurusan_data = mysqli_fetch_array($result)) {
                 <div class="form-group">
                     <div class="col-sm-10 pull-right">
                         <button type="submit" class="btn btn-danger btn-sm" name="update"> <span class="glyphicon glyphicon-upload"></span> Update</button>
+                        <a href="<?= base_url('akademik/jurusan/view_jurusan.php') ?>" class="btn btn-warning"> Back </a>
                     </div>
                 </div>
             </form>
@@ -71,4 +72,4 @@ while ($jurusan_data = mysqli_fetch_array($result)) {
     </div>
 </div>
 
-<?php include_once('../_footer.php'); ?>
+<?php include_once('../../_footer.php'); ?>

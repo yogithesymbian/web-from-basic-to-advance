@@ -10,11 +10,11 @@
 
 <body>
     <?php
-    include_once('../_config/config.php');
+    include_once('../../_config/config.php');
 
-    $nim = $_GET['nim'];
+    $kd_jur = $_GET['kd_jur'];
 
-    $query_del = "DELETE FROM mhs WHERE nim='$nim'";
+    $query_del = "DELETE FROM jurusan WHERE kd_jur='$kd_jur'";
     $hasil = mysqli_query($conncrud, $query_del);
 
     if ($hasil == 1) {

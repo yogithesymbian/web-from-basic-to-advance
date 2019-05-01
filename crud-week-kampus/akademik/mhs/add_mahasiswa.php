@@ -1,4 +1,4 @@
-<?php include_once('../_header.php'); ?>
+<?php include_once('../../_header.php'); ?>
 
 <div class="container">
     <div class="row">
@@ -81,7 +81,7 @@
                 <div class="form-group">
                     <div class="col-xs-offset-2 col-sm-10">
                         <input type="submit" value="Save" class="btn btn-primary">
-                        <a href="<?= base_url('dosenStyle/view_jurusan.php') ?>" class="btn btn-warning"> Back </a>
+                        <a href="<?= base_url('akademik/mhs/view_mhs.php') ?>" class="btn btn-warning"> Back </a>
                     </div>
                 </div>
             </form>
@@ -136,4 +136,4 @@
     </div>
 </div>
 
-<?php include_once('../_footer.php'); ?>
+<?php include_once('../../_footer.php'); ?>
