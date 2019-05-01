@@ -50,8 +50,8 @@
                         include("../myStyleCode/api/query-data.php");
                         // get data from {include} in there is query $category, use it and looping that
                         while ($user_data = mysqli_fetch_array($category)) {
-                                echo "<option>" . $user_data['nm_jur'] . "</option>";
-                            }
+                            echo "<option>" . $user_data['nm_jur'] . "</option>";
+                        }
                         ?>
                         <!-- End Of Get Data -->
                     </select>

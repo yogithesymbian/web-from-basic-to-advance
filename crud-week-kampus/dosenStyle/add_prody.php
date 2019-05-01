@@ -1,118 +1,100 @@
-<html>
+<?php include_once('../_header.php'); ?>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>Homepage</title>
-    <meta name="description" content="CRUD ( create, read, update, delete)">
-    <meta name="author" content="Yogi Arif Widodo">
-    <meta name="keywords" content="html, php, css, crud, javascript">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../_assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="../_assets/css/simple-sidebar.css" rel="stylesheet">
-</head>
-
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <br>
-                <h1>Add New Record</h1>
-                <p></p>
-                <?php
-                $con = mysqli_connect("localhost", "root", "", "ti_4a_2019");
-                ?>
-                <form action="add_prody.php" method="post" class="form-horizontal">
-                    <div class="form-group">
-                        <label for="kode-prody" class="control-label col-sm-2">Kode Prody</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="kd_prody" id="id_kd_prody" class="form-control" required autofocus>
-                        </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <br>
+            <h1>Add New Record</h1>
+            <p></p>
+            <?php
+            $con = mysqli_connect("localhost", "root", "", "ti_4a_2019");
+            ?>
+            <form action="add_prody.php" method="post" class="form-horizontal">
+                <div class="form-group">
+                    <label for="kode-prody" class="control-label col-sm-2">Kode Prody</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="kd_prody" id="id_kd_prody" class="form-control" required autofocus>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="nama-prody" class="control-label col-sm-2">Nama Prody</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="nm_prody" id="id_nm_prody" class="form-control" required autofocus>
-                        </div>
+                <div class="form-group">
+                    <label for="nama-prody" class="control-label col-sm-2">Nama Prody</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="nm_prody" id="id_nm_prody" class="form-control" required autofocus>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="nama-prody" class="control-label col-sm-2">Jurusan</label>
-                        <div class="col-sm-10">
-                            <!-- <input type="text" name="nm_jur" id="id_nm_jur" class="form-control" required autofocus> -->
-                            <select name="kd_jur" id="id_kd_jur" class="form-control col-md-8">
-                                <?php
-                                $con = mysqli_connect("localhost", "root", "", "ti_4a_2019");
-                                $query = "SELECT
+                <div class="form-group">
+                    <label for="nama-prody" class="control-label col-sm-2">Jurusan</label>
+                    <div class="col-sm-10">
+                        <!-- <input type="text" name="nm_jur" id="id_nm_jur" class="form-control" required autofocus> -->
+                        <select name="kd_jur" id="id_kd_jur" class="form-control col-md-8">
+                            <?php
+                            $con = mysqli_connect("localhost", "root", "", "ti_4a_2019");
+                            $query = "SELECT
                                                 *
                                             FROM
                                                 jurusan;";
 
-                                $hasil = mysqli_query($con, $query);
+                            $hasil = mysqli_query($con, $query);
 
-                                while ($row = mysqli_fetch_array($hasil)) {
-                                    echo "<option value='$row[kd_jur]'>" . $row['kd_jur'] . " - " . $row['nm_jur'] . "</option>";
-                                }
-                                ?>
-                            </select>
-                        </div>
+                            while ($row = mysqli_fetch_array($hasil)) {
+                                echo "<option value='$row[kd_jur]'>" . $row['kd_jur'] . " - " . $row['nm_jur'] . "</option>";
+                            }
+                            ?>
+                        </select>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" value="Save" class="btn btn-primary">
-                            <a href="http://localhost/kuliah/crud-week-kampus/dosenStyle/view_prody.php" class="btn btn-warning"> Back </a>
-                        </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <input type="submit" value="Save" class="btn btn-primary">
+                        <a href="<?= base_url('dosenStyle/view_jurusan.php') ?>" class="btn btn-warning"> Back </a>
                     </div>
-                </form>
+                </div>
+            </form>
 
-                <!-- PHP SCRIPT HANDLE ADD NEW RECORD -->
-                <?php
-                error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
-                $kode = $_POST['kd_prody'];
-                $name = $_POST['nm_prody'];
-                $jurusan = $_POST['kd_jur'];
+            <!-- PHP SCRIPT HANDLE ADD NEW RECORD -->
+            <?php
+            error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+            $kode = $_POST['kd_prody'];
+            $name = $_POST['nm_prody'];
+            $jurusan = $_POST['kd_jur'];
 
 
-                if (isset($kode)) {
-                    $query = "INSERT INTO prody VALUES ('$kode', '$name', '$jurusan')";
-                    $sql = mysqli_query($con, $query);
-                    if ($sql == 1) {
-                        ?>
-                        <script language='Javascript'>
-                            ;
-                            (window.alert('Data sudah tersimpan'))
-                        </script>";
-
-                        <script language='javascript'>
-                            location.href = 'view_prody.php'
-                        </script>";
-                    <?php
-                } else {
+            if (isset($kode)) {
+                $query = "INSERT INTO prody VALUES ('$kode', '$name', '$jurusan')";
+                $sql = mysqli_query($con, $query);
+                if ($sql == 1) {
                     ?>
-                        "<script language='Javascript'>
-                            ;
-                            (window.alert('Data tidak tersimpan'))
-                        </script>";
+                    <script language='Javascript'>
+                        ;
+                        (window.alert('Data sudah tersimpan'))
+                    </script>";
 
-                        "<script language='javascript'>
-                            location.href = 'add_prody.php'
-                        </script>";
-                    <?php
-                }
+                    <script language='javascript'>
+                        location.href = 'view_prody.php'
+                    </script>";
+                <?php
+            } else {
+                ?>
+                    "<script language='Javascript'>
+                        ;
+                        (window.alert('Data tidak tersimpan'))
+                    </script>";
+
+                    "<script language='javascript'>
+                        location.href = 'add_prody.php'
+                    </script>";
+                <?php
             }
+        }
 
-            ?>
-            </div>
+        ?>
         </div>
     </div>
-    <!-- jQuery -->
-    <script src="../_assets/js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../_assets/js/bootstrap.min.js"></script>
-</body>
+</div>
 
-</html>
+
+<?php include_once('../_footer.php'); ?>

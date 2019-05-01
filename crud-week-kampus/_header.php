@@ -58,6 +58,12 @@ require_once "_config/config.php";
                     <a href="<?= base_url('#') ?>"><span class="glyphicon glyphicon-bookmark"></span> basic 1</a>
                 </li>
                 <li>
+                    <strong>Searching</strong>
+                </li>
+                <li>
+                <a href="<?= base_url('myStyleCode/find.php') ?>"><span class="glyphicon glyphicon-paperclip"></span> Mahasiswa</a>
+                </li>
+                <li>
                     <strong>Config</strong>
                 </li>
                 <li>
