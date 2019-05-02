@@ -1,18 +1,48 @@
 <?php include_once('../../_header.php'); ?>
 
+<?php
+include_once('../../_config/config.php');
+// displaying selected prody based on kd_prody
+// getting kd_prody from url
+$kd_prody = $_GET['kd_prody'];
+// $kd_not_in = $_GET['kd_prody'];
+
+/**
+ * mysqli_query show by (based on) $kd_prody
+ * while data fetch_array
+ */
+
+//  inner join between Jurusan and Prody
+$result = mysqli_query($conncrud, "SELECT
+                                        *
+                                    FROM
+                                        prody pr,
+                                        jurusan jur
+                                    WHERE
+                                        jur.kd_jur = pr.kd_jur
+                                        AND
+                                        pr.kd_prody = '$kd_prody'
+                                        ");
+
+while ($prody_data = mysqli_fetch_array($result)) {
+    $kd_prody = $prody_data['kd_prody'];
+    $nm_prody = $prody_data['nm_prody'];
+    $kd_jur = $prody_data['kd_jur'];
+    $nm_jur = $prody_data['nm_jur'];
+}
+?>
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <h1>Add New Record</h1>
+            <h1 class="text-primary">Updated Record</h1>
+            <br>
             <p></p>
-            <?php
-            $con = mysqli_connect("localhost", "root", "", "ti_4a_2019");
-            ?>
-            <form action="add_jurusan.php" method="post" class="form-horizontal">
+            <form action="edit-prody.php" method="post" class="form-horizontal" name="update_data">
                 <div class="form-group">
-                    <label for="kode-jurusan" class="col-sm-2 control-label">Kode Jurusan</label>
+                    <label for="kode-prody" class="col-sm-2 control-label">Kode Prody</label>
                     <div class="col-sm-10">
-                        <input type="text" name="kd_jur" id="id_kd_jur" class="form-control" required autofocus>
+                        <input type="text" name="kd_prody" id="id_kd_prody" class="form-control" value="<?php echo $kd_prody ?>" required autofocus readonly>
                     </div>
                     <!-- <table>
                             <tr> <label for="kode-jurusan">Kode Jurusan : </label> </tr>
@@ -21,32 +51,62 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="nama-prody" class="control-label col-sm-2">Nama Prody</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="nm_prody" id="id_nm_prody" class="form-control" value="<?php echo $nm_prody ?>" required autofocus>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label for="nama-jurusan" class="control-label col-sm-2">Nama Jurusan</label>
                     <div class="col-sm-10">
-                        <input type="text" name="nm_jur" id="id_nm_jur" class="form-control" required autofocus>
+                        <select name="kd_jur" id="id_kd_jur" class="form-control">
+                            <option value="<?php echo $kd_jur ?>"> <?php echo $kd_jur; ?> ( <?php echo $nm_jur; ?> ) </option>
+                            <?php
+                            // get list jurusan
+                            $resultname = mysqli_query($conncrud, "SELECT
+                                            *
+                                        FROM
+                                            jurusan jur
+                                        WHERE
+                                            jur.kd_jur NOT IN ('$kd_jur')
+                                            ");
+                            while ($jurusan_data = mysqli_fetch_array($resultname)) {
+                                // $kd_jur_list = $prody_data['kd_jur'];
+                                // $nm_jur_list = $jurusan_data['nm_jur'];
+                                ?>
+                                <option value="<?php echo $jurusan_data['kd_jur'] ?>"> <?php echo $jurusan_data['kd_jur'] ?> ( <?php echo $jurusan_data['nm_jur'] ?> )</option>
+                            <?php
+                        }
+                        ?>
+                        </select>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <input type="submit" value="Save" class="btn btn-primary">
-                        <a href="<?= base_url('akademik/prody/view_prody.php') ?>" class="btn btn-warning"> Back </a>
+                        <input type="submit" value="Update" class="btn btn-success" name="update">
+                        <a href="<?= base_url('akademik/prody/view_prody.php') ?>" class="btn btn-warning"> <span class="glyphicon glyphicon-circle-arrow-left"></span> Back </a>
                     </div>
                 </div>
             </form>
 
             <!-- PHP SCRIPT HANDLE ADD NEW RECORD -->
             <?php
-            error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
-            $kode = $_POST['kd_jur'];
-            $name = $_POST['nm_jur'];
+            // error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 
-            // $kode = isset($_POST['kd_jur']) ? $_POST['kd_jur'] : '';
-            // $name = isset($_POST['nm_jur']) ? $_POST['nm_jur'] : '';
+            // $kd_prody = $_POST['kd_prody'];
+            // $nm_prody = $_POST['nm_prody'];
+            // $kd_jur = $_POST['kd_jur'];
 
-            if (isset($kode)) {
-                $query = "INSERT INTO jurusan VALUES ('$kode', '$name')";
-                $sql = mysqli_query($con, $query);
+            if (isset($_POST['update'])) {
+
+                $kd_prody = $_POST['kd_prody'];
+                $nm_prody = $_POST['nm_prody'];
+                $kd_jur = $_POST['kd_jur'];
+
+                $query = "UPDATE prody SET nm_prody='$nm_prody',kd_jur='$kd_jur' WHERE kd_prody='$kd_prody'";
+                $sql = mysqli_query($conncrud, $query);
                 // Jika data disimpan value sql = 1
                 // Jika data tidak tersimpan value sql = 0
                 if ($sql == 1) {
@@ -57,7 +117,7 @@
                     </script>";
 
                     <script language='javascript'>
-                        location.href = 'view_jurusan.php'
+                        location.href = 'view_prody.php'
                     </script>";
                 <?php
             } else {
@@ -68,7 +128,7 @@
                     </script>";
 
                     "<script language='javascript'>
-                        location.href = 'add_jurusan.php'
+                        location.href = 'view_prody.php'
                     </script>";
                 <?php
             }

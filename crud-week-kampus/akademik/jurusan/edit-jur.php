@@ -12,7 +12,7 @@ $nama = $_GET['nm_jur'];
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <h1 class="text-primary">Add New Record</h1>
+            <h1 class="text-primary">Update Record</h1>
             <?php
             // $con = mysqli_connect("localhost", "root", "", "ti_4a_2019");
             ?>
@@ -33,20 +33,17 @@ $nama = $_GET['nm_jur'];
 
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <input type="submit" value="Save" class="btn btn-primary">
-                        <a href="<?= base_url('akademik/jurusan/view_jurusan.php') ?>" class="btn btn-warning"> Back </a>
+                        <input type="submit" value="Update" class="btn btn-success">
+                        <a href="<?= base_url('akademik/jurusan/view_jurusan.php') ?>" class="btn btn-warning"> <span class="glyphicon glyphicon-circle-arrow-left"></span> Back </a>
                     </div>
                 </div>
             </form>
 
             <!-- PHP SCRIPT HANDLE ADD NEW RECORD -->
             <?php
-            // error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+            error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
             $kd_jur = $_POST['kd_jur'];
             $nm_jur = $_POST['nm_jur'];
-
-            // $kd_jurup = $_POST['kd_jur'];
-            // $nm_jurup = $_POST['nm_jur'];
 
 
             if (isset($kd_jur)) {

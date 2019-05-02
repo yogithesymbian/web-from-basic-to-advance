@@ -49,8 +49,8 @@
 
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <input type="submit" value="Save" class="btn btn-primary">
-                        <a href="<?= base_url('akademik/prody/view_prody.php') ?>" class="btn btn-warning"> Back </a>
+                        <input type="submit" value="Save" class="btn btn-success">
+                        <a href="<?= base_url('akademik/prody/view_prody.php') ?>" class="btn btn-warning"> <span class="glyphicon glyphicon-circle-arrow-left"></span> Back </a>
                     </div>
                 </div>
             </form>

@@ -1,4 +1,8 @@
+<!--
+    load header for sidebar
+ -->
 <?php include_once('../../_header.php'); ?>
+<!-- toggle hide sidebar -->
 <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"> <span class="glyphicon glyphicon-align-justify"></span> </a>
 <div class="container">
     <div class="row">
