@@ -52,6 +52,12 @@ require_once "_config/config.php";
                     <a href="<?= base_url('akademik/mhs/view_mhs.php') ?>"><span class="glyphicon glyphicon-book"></span> Data Mahasiswa</a>
                 </li>
                 <li>
+                    <strong> Hairstyle </strong>
+                </li>
+                <li>
+                    <a href="<?= base_url('hairstyle/home.php') ?>"><span class="glyphicon glyphicon-book"></span> Home</a>
+                </li>
+                <li>
                     <strong>basic</strong>
                 </li>
                 <li>

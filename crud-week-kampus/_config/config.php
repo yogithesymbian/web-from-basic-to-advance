@@ -22,3 +22,12 @@ function base_url($url = null)
         return $base_url;
     }
 }
+function base_url1($url = null)
+{
+    $base_url = "http://y.id/kuliah/crud-week-kampus";
+    if ($url != null) {
+        return $base_url . "/" . $url;
+    } else {
+        return $base_url;
+    }
+}

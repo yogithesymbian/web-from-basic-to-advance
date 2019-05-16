@@ -9,6 +9,8 @@ $kode = $_GET['kd_jur'];
 $nama = $_GET['nm_jur'];
 ?>
 
+<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"> <span class="glyphicon glyphicon-align-justify"></span> </a>
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

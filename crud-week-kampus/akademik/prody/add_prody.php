@@ -1,5 +1,6 @@
 <?php include_once('../../_header.php'); ?>
 
+<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"> <span class="glyphicon glyphicon-align-justify"></span> </a>
 
 <div class="container">
     <div class="row">

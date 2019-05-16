@@ -24,14 +24,20 @@ $result = mysqli_query($conncrud, "SELECT
                                         pr.kd_prody = '$kd_prody'
                                         ");
 
-while ($prody_data = mysqli_fetch_array($result)) {
-    $kd_prody = $prody_data['kd_prody'];
-    $nm_prody = $prody_data['nm_prody'];
-    $kd_jur = $prody_data['kd_jur'];
-    $nm_jur = $prody_data['nm_jur'];
-}
+// while (
+/**
+ * do not use loop ( while )
+ * if u know the output has only 1
+ */
+$prody_data = mysqli_fetch_array($result);
+//  {
+$kd_prody = $prody_data['kd_prody'];
+$nm_prody = $prody_data['nm_prody'];
+$kd_jur = $prody_data['kd_jur'];
+$nm_jur = $prody_data['nm_jur'];
+// }
 ?>
-
+<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"> <span class="glyphicon glyphicon-align-justify"></span> </a>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -61,21 +67,38 @@ while ($prody_data = mysqli_fetch_array($result)) {
                     <label for="nama-jurusan" class="control-label col-sm-2">Nama Jurusan</label>
                     <div class="col-sm-10">
                         <select name="kd_jur" id="id_kd_jur" class="form-control">
-                            <option value="<?php echo $kd_jur ?>"> <?php echo $kd_jur; ?> ( <?php echo $nm_jur; ?> ) </option>
                             <?php
                             // get list jurusan
+                            // $resultname = mysqli_query($conncrud, "SELECT
+                            //                 *
+                            //             FROM
+                            //                 jurusan jur
+                            //             WHERE
+                            //                 jur.kd_jur NOT IN ('$kd_jur')
+                            //                 ");
                             $resultname = mysqli_query($conncrud, "SELECT
                                             *
                                         FROM
                                             jurusan jur
-                                        WHERE
-                                            jur.kd_jur NOT IN ('$kd_jur')
                                             ");
                             while ($jurusan_data = mysqli_fetch_array($resultname)) {
                                 // $kd_jur_list = $prody_data['kd_jur'];
                                 // $nm_jur_list = $jurusan_data['nm_jur'];
+                                if ($jurusan_data['kd_jur'] == $prody_data['kd_jur']) {
+                                    ?>
+
+                                    <option value="<?php echo $jurusan_data['kd_jur'] ?>" selected> <?php echo $jurusan_data['kd_jur']; ?> ( <?php echo $jurusan_data['nm_jur']; ?> ) </option>
+
+                                <?php
+                            } else {
                                 ?>
-                                <option value="<?php echo $jurusan_data['kd_jur'] ?>"> <?php echo $jurusan_data['kd_jur'] ?> ( <?php echo $jurusan_data['nm_jur'] ?> )</option>
+
+                                    <option value="<?php echo $jurusan_data['kd_jur'] ?>"> <?php echo $jurusan_data['kd_jur']; ?> ( <?php echo $jurusan_data['nm_jur']; ?> ) </option>
+
+                                <?php
+                            }
+                            ?>
+
                             <?php
                         }
                         ?>

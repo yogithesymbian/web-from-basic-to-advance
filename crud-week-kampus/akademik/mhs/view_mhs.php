@@ -15,7 +15,7 @@
                     <th>Tgl_Lahir</th>
                     <th>Agama</th>
                     <th>Alamat</th>
-                    <th>Jurusan</th>
+                    <th>Prody</th>
                     <th>Action</th>
                 </tr>
                 <?php
@@ -28,7 +28,7 @@
         ms.tgl_lahir,
         ms.agama,
         ms.alamat,
-        jur.nm_jur
+        pr.nm_prody
     FROM
         jurusan jur,
         mhs ms,
