@@ -25,13 +25,18 @@ include_once('../_config/config.php');
 					<a href="about.html">about</a>
 				</li>
 				<li>
-					<a href="hairstyle.html">hairstyles</a>
+					<a href="hairstyle.php">hairstyles</a>
 				</li>
 				<li class="selected">
 					<a href="news.html">news</a>
 				</li>
 				<li>
 					<a href="contact.html">contact</a>
+				</li>
+				<li>
+					<span>
+						<a href="http://y.id/kuliah/crud-week-kampus/hairstyle/auth/login.php"> Login </a>
+					</span>
 				</li>
 			</ul>
 		</div>
@@ -55,8 +60,8 @@ include_once('../_config/config.php');
 				?>
 				<h3> <strong><?php echo "$brs[1]" ?></strong>
 					<br>
-					<span style='font-size: 12px;'> <em>Post :</em> </span>
-					<span style=' font-size: 12px; color: #4C8E96'> <em><?php echo "$brs[3]" ?></em> </span>
+					<span style='font-size: 11px;'> <strong><em>Post :</em></strong> </span>
+					<span style=' font-size: 11px; color: #4C8E96'> <em><?php echo "$brs[3]" ?></em> </span>
 				</h3>
 				<?php
 				if (!empty($brs[5])) {

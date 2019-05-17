@@ -36,6 +36,11 @@ include_once('../_config/config.php');
         <li>
           <a href="contact.html">contact</a>
         </li>
+        <li>
+          <span>
+            <a href="http://y.id/kuliah/crud-week-kampus/hairstyle/auth/login.php"> Login </a>
+          </span>
+        </li>
       </ul>
     </div>
   </div>

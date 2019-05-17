@@ -1,58 +1,32 @@
-/* print styles */
 @media print {
-  body {
-    margin: 0;
-    color: #000;
-    background-color: #fff;
-  }
+    a[href*='//']:after {
+        content:" (" attr(href) ") ";
+    }
 }
-/* print.css */
-header, footer, aside, nav, form, iframe, .menu, .hero, .adslot {
-  display: none;
-}
-
-/* print.css */
-article {
-  column-width: 17em;
-  column-gap: 3em;
+@media print {
+    a:after {
+        content:" (" attr(href) ") ";
+    }
 }
 
-/* print.css */
-img, svg {
-  display: none;
+@page {
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+    margin-left: 2cm;
+    margin-right: 2cm;
+}
+.book-date {
+    page-break-after: always;
 }
 
-img.print, svg.print {
-  display: block;
-  max-width: 100%;
+.post-content {
+    page-break-before: always;
+}
+p {
+  page-break-inside: avoid;
 }
 
-/* print.css */
-img.dark {
-  filter: invert(100%) hue-rotate(180deg) brightness(120%) contrast(150%);
-}
-
-/* print.css */
-a[href^="http"]::after {
-  content: " (" attr(href) ")";
-}
-
-/* print.css */
-main::after {
-  content: "Copyright site.com";
-  display: block;
+.text-center
+{
   text-align: center;
-}
-
-/* hidden on-screen */
-.print-only {
-  display: none;
-}
-
-@media print {
-
-  /* visible when printed */
-  .print-only {
-    display: block;
-  }
 }
