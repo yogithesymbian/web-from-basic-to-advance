@@ -31,3 +31,12 @@ function base_url1($url = null)
         return $base_url;
     }
 }
+function base_url2($url = null)
+{
+    $base_url = "http://y.id/kuliah/crud-week-kampus/uas-mr-karyo";
+    if ($url != null) {
+        return $base_url . "/" . $url;
+    } else {
+        return $base_url;
+    }
+}
